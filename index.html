@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerrocoin Exchange</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cerrocoin Exchange</h1>
+        <p>Invierte en empresas con Cerrocoins</p>
+    </header>
+    
+    <section id="balance">
+        <h2>Tu Balance</h2>
+        <p>Cerrocoins: <span id="cerrocoins">5</span></p>
+    </section>
+    
+    <section id="market">
+        <h2>Mercado</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Empresa</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="market-list"></tbody>
+        </table>
+    </section>
+    
+    <section id="portfolio">
+        <h2>Tu Portafolio</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Empresa</th>
+                    <th>Acciones</th>
+                    <th>Valor Total</th>
+                </tr>
+            </thead>
+            <tbody id="portfolio-list"></tbody>
+        </table>
+    </section>
+
+    <script src="prices.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
