@@ -61,9 +61,14 @@ function buy(index) {
 function sell(index) {
     const company = companies[index];
 
-    if (userData.portfolio[company.name] > 0) {
+    if (userData.portfolio[company.name] && userData.portfolio[company.name] > 0) {
         userData.cerrocoins += parseFloat(company.price);
         userData.portfolio[company.name]--;
+
+        // Si ya no tiene más acciones de esa empresa, eliminarla del portafolio
+        if (userData.portfolio[company.name] === 0) {
+            delete userData.portfolio[company.name];
+        }
 
         updateLocalStorage();
         render();
